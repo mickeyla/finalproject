@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <div class="container">
+        <img src = "LOGO.JPG" alt = "logo" class = "logo" height = 50 width = 160>
+
+        <nav>
+          <ul>
+            <li><a href="final.html">Home</a></li>
+            <li><a href="analyze.html">Analyze Your Time</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="about.html">About Focal Focus</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <p id="hi"> </p>
+    <!--
+    <fieldset>
+      <legend>Input</legend>
+
+      <form id="form1">
+        <div>
+          Work: <input type="number" name="WorkInput" value="">
+          <span class="warning">*(Allows only numbers.)</span>
+        </div>
+          <input type="submit" form="form1" value="Submit" onclick="myFunction(WorkInput)">
+      </form>
+      <script>
+        function myFunction(WorkInput)
+        {
+          var Alexis = document.getElementById("").value ;
+          alert(Alexis);
+        }
+      </script>
+
+<form id="form" onsubmit="return false;">
+<input style="position:absolute; top:80%; left:5%; width:40%;" type="text" id="userInput" />
+
+
+<input style="position:absolute; top:80%; left:5%; width:40%;" type="text" id="userInput2" />
+
+
+<input style="position:absolute; top:80%; left:5%; width:40%;" type="text" id="userInput3" />
+
+
+<input style="position:absolute; top:80%; left:5%; width:40%;" type="text" id="userInput4" />
+<input style="position:absolute; top:50%; left:5%; width:40%;" type="submit" onclick="othername();" />
+</form>
+
+-->
+
+<form id="form" onsubmit="return false;">
+First name: <input type="text" name="FirstName" value="" id="userInput"><br>
+
+Middle name: <input type="text" name="MiddleName" value="" id="userInput2"><br>
+
+Last name: <input type="text" name="LastName" value="" id="userInput3"><br>
+
+Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
+<input type="submit" value="Submit" onclick="othername();">
+</form>
+
+<script>
+  function othername()
+  {
+    var input = document.getElementById("userInput").value;
+    var input2 = document.getElementById("userInput2").value;
+    var input3 = document.getElementById("userInput3").value;
+    var input4 = document.getElementById("userInput4").value;
+    var data = [];
+
+
+    data.push(input);
+    data.push(input2);
+    data.push(input3);
+    data.push(input4);
+
+    document.getElementById("hi").innerHTML = data;
+  }
+</script>
+
+
+</body>
+</html>
