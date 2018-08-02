@@ -8,26 +8,26 @@
 
   </head>
   <body>
+    <p id="hi">Hey, B!</p>
     <div id="chart"></div>
     <script src="d3.v4.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-      (function(d3) {
+    (function(d3) {
         'use strict';
         var dataset = [
-          { label: 'Homework', count: 0},
-          { label: 'Work', count: 0},
-          { label: 'School', count: 0},
-          { label: 'Sleep', count: 0}
+          { label: 'Abulia', count: 10 },
+          { label: 'Betelgeuse', count: 20 },
+          { label: 'Cantaloupe', count: 30 },
+          { label: 'Dijkstra', count: 40 }
         ];
         //Insert user's input into dataset
-        var x;
-        var dataIndex=0;
-        for x in dataset {
-          dataset[x] = data[dataIndex];
-          dataIndex+=1;
-
-        document.getElementById("hi").innerHTML = dataset;
+    var x;
+    var dataIndex=0;
+    for x in dataset {
+      dataset[x] = data[dataIndex];
+      dataIndex+=1;
+    }
 
         var width = 360;
         var height = 360;
@@ -79,6 +79,8 @@
           .attr('y', legendRectSize - legendSpacing)              // NEW
           .text(function(d) { return d; });                       // NEW
       })(window.d3);
+
+
     </script>
   </body>
 </html>

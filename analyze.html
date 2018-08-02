@@ -75,13 +75,13 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
     var input2 = document.getElementById("userInput2").value;
     var input3 = document.getElementById("userInput3").value;
     var input4 = document.getElementById("userInput4").value;
-    var data = [];
+    var data_pie_list = [];
 
 
-    data.push(input);
-    data.push(input2);
-    data.push(input3);
-    data.push(input4);
+    data_pie_list.push(input);
+    data_pie_list.push(input2);
+    data_pie_list.push(input3);
+    data_pie_list.push(input4);
 
     document.getElementById("hi").innerHTML = data;
   }
@@ -92,15 +92,23 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
 <script>
-  (function(d3) {
+(function(d3) {
     'use strict';
     var dataset = [
-      { label: 'Homework', count:  8},
-      { label: 'Sleep', count: 5},
-      { label: 'Cantaloupe', count: 7},
-      { label: 'Dijkstra', count: 9}
+      { label: 'Abulia', count: 10 },
+      { label: 'Betelgeuse', count: 20 },
+      { label: 'Cantaloupe', count: 30 },
+      { label: 'Dijkstra', count: 40 }
     ];
+
+
+    var x1;
+    var dataIndex=0;
+    for (x1 in dataset) {
+      dataset[x1]["count"] = data_pie_list[dataIndex];
+      dataIndex+=1;
     }
+
     var width = 360;
     var height = 360;
     var radius = Math.min(width, height) / 2;
@@ -151,6 +159,7 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
       .attr('y', legendRectSize - legendSpacing)              // NEW
       .text(function(d) { return d; });                       // NEW
   })(window.d3);
+
 </script>
 
 
