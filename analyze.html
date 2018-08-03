@@ -21,7 +21,8 @@
         </nav>
       </div>
     </header>
-    <p id="hi"> </p>
+    <p id="pie-location"> </p>
+    <p id="test"></p>
     <!--
     <fieldset>
       <legend>Input</legend>
@@ -68,14 +69,20 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
 <input type="submit" value="Submit" onclick="othername();">
 </form>
 
+
+
 <script>
+/*
+  Stores user input into list
+*/
+var data_pie_list=[];
   function othername()
   {
     var input = document.getElementById("userInput").value;
     var input2 = document.getElementById("userInput2").value;
     var input3 = document.getElementById("userInput3").value;
     var input4 = document.getElementById("userInput4").value;
-    var data_pie_list = [];
+    data_pie_list = [];
 
 
     data_pie_list.push(input);
@@ -83,31 +90,44 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
     data_pie_list.push(input3);
     data_pie_list.push(input4);
 
-    document.getElementById("hi").innerHTML = data;
+    document.getElementById("pie-location").innerHTML = data_pie_list;
+
+    return data_pie_list;
   }
+
 </script>
 
-<div id="chart"></div>
-<script src="d3.v4.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-
+  <div id="chart"></div>
+  <script src="d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
+/*
+  pie chart gets graphed
+*/
 (function(d3) {
     'use strict';
+    //existing array of values for pie chart
     var dataset = [
-      { label: 'Abulia', count: 10 },
-      { label: 'Betelgeuse', count: 20 },
-      { label: 'Cantaloupe', count: 30 },
-      { label: 'Dijkstra', count: 40 }
+      { label: 'Work', count: 10 },
+      { label: 'Classes', count: 10 },
+      { label: 'Homework', count: 10 },
+      { label: 'Sleep', count: 10 }
     ];
 
-
-    var x1;
-    var dataIndex=0;
-    for (x1 in dataset) {
-      dataset[x1]["count"] = data_pie_list[dataIndex];
-      dataIndex+=1;
+    //accesses each value of the empty list
+    //also replaces empty list with dataset of user's input
+    var finaldata = othername()
+    var txt = "";
+    var idx;
+    for (idx=0; idx<dataset.length; idx++) {
+      dataset[idx]["count"]=finaldata[idx];
+    //
+    //
+    // 	//txt = txt+Object.values(dataset[elementIndex]);
     }
+    // document.getElementById("test").innerHTML = txt;
+
+
 
     var width = 360;
     var height = 360;
