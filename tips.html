@@ -1,21 +1,22 @@
-<<<<<<< HEAD
 
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
       <div class="container">
-        <img src = "LOGO.JPG" alt = "logo" class = "logo" height = 50 width = 160>
-
+        <a href="home.html"><img src = "LOGO.JPG" alt = "logo" class = "logo" height = 70 width = 160></a>
         <nav>
           <ul>
-            <li><a href="final.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="analyze.html">Analyze Your Time</a></li>
             <li><a href="tips.html">Tips</a></li>
-            <li><a href="about.html">About Focal Focus</a></li>
-            
+            <li><a href="todo.html">Schedule Your Time</a></li>
+
           </ul>
         </nav>
       </div>
@@ -27,41 +28,118 @@
       <p>We'll help you manage them.</p>
     </center>
 
+<div class="w3-container">
+  <center>
+  <p>
+    <button onclick="book()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-book" style="font-size: 60px;"></i></button>
+    <button onclick="sleep()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-moon-o" style="font-size: 60px;"></i></button>
+    <button onclick="social()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-comments" style="font-size: 60px;"></i></button>
+    <button onclick="work()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-folder-open" style="font-size: 60px;"></i></button>
+  </p>
 
+  </center>
+</div>
+<table id = "school" class="w3-table-all w3-card-4" style = "display:none">
+   <tr>
+    <th><center>School Tips</center></th>
+   </tr>
+   <tr>
+     <td>Jill</td>
+   </tr>
+   <tr>
+     <td>Eve</td>
+   </tr>
+   <tr>
+     <td>Adam</td>
+   </tr>
+ </table>
+
+
+ <table id = "sleep" class="w3-table-all w3-card-4" style = "display:none">
+    <tr>
+     <th><center>Sleep Tips</center></th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+    </tr>
+  </table>
+
+
+
+  <table id = "social" class="w3-table-all w3-card-4" style = "display:none">
+     <tr>
+      <th><center>Social Tips</center></th>
+     </tr>
+     <tr>
+       <td>Jill</td>
+     </tr>
+     <tr>
+       <td>Eve</td>
+     </tr>
+     <tr>
+       <td>Adam</td>
+     </tr>
+   </table>
+
+   <table id = "work" class="w3-table-all w3-card-4" style = "display:none">
+      <tr>
+       <th><center>Work Tips</center></th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+      </tr>
+      <tr>
+        <td>Adam</td>
+      </tr>
+    </table>
+<p id="demo"></p>
+
+<script>
+function book() {
+  if (document.getElementById("school").style.display == "none"){
+    document.getElementById("school").style.display = "block";
+  }
+  else{
+    document.getElementById("school").style.display = "none";
+  }
+}
+
+function sleep() {
+  if (document.getElementById("sleep").style.display == "none"){
+    document.getElementById("sleep").style.display = "block";
+  }
+  else{
+    document.getElementById("sleep").style.display = "none";
+  }
+}
+
+function social() {
+  if (document.getElementById("social").style.display == "none"){
+    document.getElementById("social").style.display = "block";
+  }
+  else{
+    document.getElementById("social").style.display = "none";
+  }
+}
+
+function work() {
+  if (document.getElementById("work").style.display == "none"){
+    document.getElementById("work").style.display = "block";
+  }
+  else{
+    document.getElementById("work").style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
-=======
-
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-      <div class="container">
-        <img src = "LOGO.JPG" alt = "logo" class = "logo" height = 50 width = 160>
-
-        <nav>
-          <ul>
-            <li><a href="final.html">Home</a></li>
-            <li><a href="analyze.html">Analyze Your Time</a></li>
-            <li><a href="tips.html">Tips</a></li>
-            <li><a href="about.html">About Focal Focus</a></li>
-            
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-
-    <center>
-    <h1>What are some of your priorities?</h1>
-      <p>We'll help you manage them.</p>
-    </center>
-
-
-
-</body>
-</html>
->>>>>>> alexis
