@@ -1,9 +1,4 @@
-body {
-    font-family: "Times New Roman", Times, serif;
-}
-
-
-
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 	margin: 0;
 	background: white;
@@ -17,7 +12,7 @@ body {
 }
 
 header {
-  background: white;
+  background: black;
 }
 
 header::after {
@@ -50,14 +45,14 @@ nav li {
 }
 
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
 nav a:hover {
-  color: #D19364;
+  color: #E7AD99;
 }
 
 nav a::before {
@@ -77,15 +72,23 @@ nav a:hover::before {
   width: 100%;
 }
 
+
+/*
 legend {
     background-color: #000;
     color: #fff;
     padding: 3px 6px;
 }
-
 input,
 label {
-    width: 43%;
+    width: 3%;
+}
+*/
+
+
+
+#userInput, #userInput2, #userInput3, #userInput4 {
+	width: 3%;
 }
 
 input {
