@@ -2,7 +2,8 @@
 <head>
 <link rel="stylesheet" href="style.css">
 
-
+<!-- <script src="d3.v4.min.js"></script> -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
 
 </head>
 <body>
@@ -66,7 +67,7 @@ Middle name: <input type="text" name="MiddleName" value="" id="userInput2"><br>
 Last name: <input type="text" name="LastName" value="" id="userInput3"><br>
 
 Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
-<input type="submit" value="Submit" onclick="othername();">
+<input type="submit" value="Submit" onclick="othername()">
 </form>
 
 
@@ -75,57 +76,62 @@ Yeahum: <input type="text" name="LastName" value="" id="userInput4"><br>
 /*
   Stores user input into list
 */
-var data_pie_list=[];
+    var data_pie_list=[];
   function othername()
   {
     var input = document.getElementById("userInput").value;
     var input2 = document.getElementById("userInput2").value;
     var input3 = document.getElementById("userInput3").value;
     var input4 = document.getElementById("userInput4").value;
-    data_pie_list = [];
-
 
     data_pie_list.push(input);
     data_pie_list.push(input2);
     data_pie_list.push(input3);
     data_pie_list.push(input4);
 
-    document.getElementById("pie-location").innerHTML = data_pie_list;
+    document.getElementById("pie-location").innerHTML = "inputs inside function: " + data_pie_list;
 
-    return data_pie_list;
   }
 
+ //document.getElementById("pie-location").innerHTML = othername();
 </script>
 
-  <div id="chart"></div>
-  <script src="d3.v4.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+<div id="chart"></div>
+
 <script>
 /*
   pie chart gets graphed
 */
 (function(d3) {
-    'use strict';
+    // 'use strict';
     //existing array of values for pie chart
     var dataset = [
-      { label: 'Work', count: 10 },
-      { label: 'Classes', count: 10 },
-      { label: 'Homework', count: 10 },
-      { label: 'Sleep', count: 10 }
+      { label: 'Work', count: 10},
+      { label: 'Classes', count: 12},
+      { label: 'Homework', count: 13},
+      { label: 'Sleep', count: 11}
     ];
 
     //accesses each value of the empty list
     //also replaces empty list with dataset of user's input
-    var finaldata = othername()
+    var finaldata = data_pie_list;
+    document.getElementById("test").innerHTML = "inputs outside function: " + finaldata;
+    //dataset[0]["count"]=32;
+    // document.getElementById("test").innerHTML = "finaldata: " + finaldata[0];
+    // dataset[1]["count"]=finaldata[1];
+    // dataset[2]["count"]=finaldata[2];
+    // dataset[3]["count"]=finaldata[3];
+
     var txt = "";
     var idx;
-    for (idx=0; idx<dataset.length; idx++) {
-      dataset[idx]["count"]=finaldata[idx];
-    //
-    //
-    // 	//txt = txt+Object.values(dataset[elementIndex]);
-    }
-    // document.getElementById("test").innerHTML = txt;
+  //   for (idx=0; idx<dataset.length; idx++) {
+  //     var dict = dataset[idx]
+  //     dict["count"]=finaldata[idx];
+  //
+  //   	txt = txt+Object.values(dataset[elementIndex]);
+  // }
+  // dataset[0]["count"] = 52;
+    // document.getElementById("test").innerHTML = "dataset: " + dataset[0]["count"];
 
 
 
@@ -149,6 +155,12 @@ var data_pie_list=[];
     var pie = d3.pie()
       .value(function(d) { return d.count; })
       .sort(null);
+
+    d3.csv("data.csv", function(error, dataset) {
+      dataset.forEach(function(d) {
+        d.count = +d.count;
+      });
+
     var path = svg.selectAll('path')
       .data(pie(dataset))
       .enter()
@@ -178,7 +190,8 @@ var data_pie_list=[];
       .attr('x', legendRectSize + legendSpacing)              // NEW
       .attr('y', legendRectSize - legendSpacing)              // NEW
       .text(function(d) { return d; });                       // NEW
-  })(window.d3);
+  });
+})(window.d3);
 
 </script>
 
