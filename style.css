@@ -72,15 +72,25 @@ nav a:hover::before {
   width: 100%;
 }
 
+
+/*
 legend {
     background-color: #000;
     color: #fff;
     padding: 3px 6px;
 }
 
+
 input,
 label {
-    width: 43%;
+    width: 3%;
+}
+*/
+
+
+
+#userInput, #userInput2, #userInput3, #userInput4 {
+	width: 3%;
 }
 
 input {
