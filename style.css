@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+
 body {
 	margin: 0;
 	background: white;
