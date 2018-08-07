@@ -31,16 +31,16 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
+.fa-clock-o,.fa-bookmark{font-size:200px}
 </style>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-    <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
     <a href="analyze.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Analyze Your Time</a>
     <a href="tips.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
     <a href="todo.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Schedule Your Time</a>
@@ -68,8 +68,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Main Thing</h1>
-      <h5 class="w3-padding-32">Put lil caption here if wanted</h5>
+      <h1>Analyze Your Time</h1>
+      <h5 class="w3-padding-32">Visualize how much time you spend on each part of your day by inputting
+        the amount of hours you spend for each task below.</h5>
       <center>
             <p id="pie-location"> </p>
             <p id="test"></p>
@@ -79,15 +80,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             Classes: <input type="text" name="MiddleName" value="" id="userInput2"><br>
             Homework: <input type="text" name="LastName" value="" id="userInput3"><br>
             Sleep: <input type="text" name="LastName" value="" id="userInput4"><br>
+            <br>
             <input type="submit" value="Analyze Your Time!" onclick="othername()">
             </form>
             <div id="chart"></div>
       </center>
-      <p class="w3-text-grey">Main info here.</p>
     </div>
 
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <br>
+      <br>
+      <br>
+      <i class="fa fa-clock-o w3-padding-64 w3-text-black"></i>
       <p id="pie-location"></p>
     </div>
   </div>
@@ -97,36 +101,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+      <i class="fa fa-bookmark w3-padding-64 w3-text-black w3-margin-right"></i>
     </div>
 
     <div class="w3-twothird">
-      <h1>Extra lil info</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+      <h1>The Importance of Keeping Track of Time</h1>
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-text-grey">Knowing where you allot your time each day is an important beginning step to learning how to
+      learning how to manage it and become more productive. By forcing yourself to think about this, you may realize that you
+      don't spend enough time doing something important, such as homework or sleep.</p>
     </div>
   </div>
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+    <h1 class="w3-margin w3-xlarge">"Look at life through the windshield, not the rear view mirror." -Byrd Baggett</h1>
 </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -140,18 +131,6 @@ function myFunction() {
 }
 </script>
 
-<center>
-      <p id="pie-location"> </p>
-      <p id="test"></p>
-
-      <form id="form" onsubmit="return false;">
-      Work: <input type="text" name="FirstName" value="" id="userInput"><br>
-      Classes: <input type="text" name="MiddleName" value="" id="userInput2"><br>
-      Homework: <input type="text" name="LastName" value="" id="userInput3"><br>
-      Sleep: <input type="text" name="LastName" value="" id="userInput4"><br>
-      <input type="submit" value="Analyze Your Time!" onclick="othername()">
-      </form>
-      <div id="chart"></div>
 
     <script>
     /*
@@ -243,6 +222,5 @@ function myFunction() {
   }
     </script>
 
-</center>
   </body>
 </html>
