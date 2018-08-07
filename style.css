@@ -79,6 +79,8 @@ legend {
     color: #fff;
     padding: 3px 6px;
 }
+
+
 input,
 label {
     width: 3%;
@@ -88,7 +90,7 @@ label {
 
 
 #userInput, #userInput2, #userInput3, #userInput4 {
-	width: 3%;
+	width: 7%;
 }
 
 input {
