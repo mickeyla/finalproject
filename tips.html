@@ -7,159 +7,253 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header>
-      <div class="container">
 
-        <nav>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="analyze.html">Analyze Your Time</a></li>
-            <li><a href="tips.html">Tips</a></li>
-            <li><a href="todo.html">Schedule Your Time</a></li>
 
-          </ul>
-        </nav>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+  .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+  .fa-clock-o,.fa-coffee {font-size:200px}
+  </style>
+  <body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+      <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+      <a href="analyze.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Analyze Your Time</a>
+      <a href="tips.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
+      <a href="todo.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Schedule Your Time</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+      <a href="analyze.html" class="w3-bar-item w3-button w3-padding-large">Analyze Your Time</a>
+      <a href="tips.html" class="w3-bar-item w3-button w3-padding-large">Tips</a>
+      <a href="todo.html" class="w3-bar-item w3-button w3-padding-large">Schedule Your Time</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <!--
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+    <p class="w3-xlarge">Template by w3.css</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+  </header>
+  -->
+
+  <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Main Thing</h1>
+        <h5 class="w3-padding-32">Put lil caption here if wanted</h5>
+
+    <div class="w3-container">
+
+      <p>
+        <button onclick="book()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-book" style="font-size: 60px;"></i></button>
+        <button onclick="sleep()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-moon-o" style="font-size: 60px;"></i></button>
+        <button onclick="social()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-comments" style="font-size: 60px;"></i></button>
+        <button onclick="work()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-folder-open" style="font-size: 60px;"></i></button>
+      </p>
+
+    </div>
+
+
+    <center><table  id = "school" class="w3-table-all w3-card-4" style = "width:60%; display:none;"></center>
+       <tr>
+        <th><center>School Tips</center></th>
+       </tr>
+       <tr>
+         <td>A change of scenery changes the way you study. Move from the usual desk space to coffee shops, bookstores, libraries, etc and allow your brain to retain information better.</td>
+       <tr>
+         <td>Track your work. Keeping a dedicated planner helps you better organize the tasks you to have. </td>
+       </tr>
+       <tr>
+         <td>Look over your notes each night to make sure you have the material down pact. If you want to take a further step, re-writing notes always helps retain information. </td>
+       </tr>
+       <tr>
+         <td>Learn to accept failure! You can't always be perfect and therefore, you are bound to fail. Just learn from your mistakes and be better. </td>
+       </tr>
+       <tr>
+         <td>Effectively make use of a class. Make friends for help on homework, actively make yourself known by your teacher, attend tutoring sessions, finish classwork on time. Using classtime effectively minimizes the work you have to do at home.</td>
+       </tr>
+     </table>
+
+
+     <table id = "sleep" class="w3-table-all w3-card-4" style = "width:60%; display: none;">
+        <tr>
+         <th><center>Sleep Tips</center></th>
+        </tr>
+        <tr>
+          <td>Develop a schedule to stick to. Do your night routine and get in bed at a specific time each night.</td>
+        </tr>
+        <tr>
+          <td>Avoid naps! Tire yourself out through the day and sleep well at night!</td>
+        </tr>
+        <tr>
+          <td>Create a comfortable sleeping enviornment. If you like the area in which you sleep and are comfortable sleeping, you'll have a better time of it.</td>
+        </tr>
+        <tr>
+          <td>Avoid your phone and any bright lights that might keep you awake. Read a book, pick up journaling.</td>
+        </tr>
+        <tr>
+          <td>If it gets really bad, don't be afraid to talk to your doctor.</td>
+        </tr>
+      </table>
+
+
+
+      <table id = "social" class="w3-table-all w3-card-4" style = "display: none; width: 60%;">
+         <tr>
+          <th><center>Social Tips</center></th>
+         </tr>
+         <tr>
+           <td>Initiate conversation with new people!</td>
+         </tr>
+         <tr>
+           <td>Keep eye contact, smile, and listen. People like to know that you are engaged in their side of the conversation.</td>
+         </tr>
+         <tr>
+           <td>Make your mark! Make a good first impression to maintain good long-lasting friendships.</td>
+         </tr>
+         <tr>
+           <td>Ask people you are conversing with questions about themselves and their background to show that you would like to know more about them.</td>
+         </tr>
+         <tr>
+           <td>Keep in contact! Get numbers, names, emails. Try to keep up a consistent connection.</td>
+         </tr>
+       </table>
+
+       <table id = "work" class="w3-table-all w3-card-4" style = "display: none; width: 60%;">
+          <tr>
+           <th><center>Work Tips</center></th>
+          </tr>
+          <tr>
+            <td>Keep a positive attitude! Even when projects are tough, keep going and push onward!</td>
+          </tr>
+          <tr>
+            <td>Be on time. Being late shows that you no longer care about your job.</td>
+          </tr>
+          <tr>
+            <td>Get to know your colleagues but don't be there to gossip. You are there to work, not invest time in petty gossip.</td>
+          </tr>
+          <tr>
+            <td>Be a professional; accept constructive criticism. Feedback is meant to help you grow and learn, not take personal offense. </td>
+          </tr>
+          <tr>
+            <td>Go the extra mile to show that you are passionate in your job. Do this by avoiding distractions and setting goals for each and every day!</td>
+          </tr>
+        </table>
+    <p id="demo"></p>
+
+    <script>
+    function book() {
+      if (document.getElementById("school").style.display == "none"){
+        document.getElementById("school").style.display = "block";
+      }
+      else{
+        document.getElementById("school").style.display = "none";
+      }
+    }
+    function sleep() {
+      if (document.getElementById("sleep").style.display == "none"){
+        document.getElementById("sleep").style.display = "block";
+      }
+      else{
+        document.getElementById("sleep").style.display = "none";
+      }
+    }
+    function social() {
+      if (document.getElementById("social").style.display == "none"){
+        document.getElementById("social").style.display = "block";
+      }
+      else{
+        document.getElementById("social").style.display = "none";
+      }
+    }
+    function work() {
+      if (document.getElementById("work").style.display == "none"){
+        document.getElementById("work").style.display = "block";
+      }
+      else{
+        document.getElementById("work").style.display = "none";
+      }
+    }
+    </script>
+
       </div>
-    </header>
 
 
-    <center>
-    <h1>What are some of your priorities?</h1>
-      <p>We'll help you manage them.</p>
-    </center>
-
-<div class="w3-container">
-  <center>
-  <p>
-    <button onclick="book()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-book" style="font-size: 60px;"></i></button>
-    <button onclick="sleep()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-moon-o" style="font-size: 60px;"></i></button>
-    <button onclick="social()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-comments" style="font-size: 60px;"></i></button>
-    <button onclick="work()" class="w3-button w3-circle w3-black w3-jumbo"><i class="fa fa-folder-open" style="font-size: 60px;"></i></button>
-  </p>
-
-  </center>
-</div>
-<center><table  id = "school" class="w3-table-all w3-card-4" style = "width:60%; display:none;"></center>
-   <tr>
-    <th><center>School Tips</center></th>
-   </tr>
-   <tr>
-     <td>A change of scenery changes the way you study. Move from the usual desk space to coffee shops, bookstores, libraries, etc and allow your brain to retain information better.</td>
-   <tr>
-     <td>Track your work. Keeping a dedicated planner helps you better organize the tasks you to have. </td>
-   </tr>
-   <tr>
-     <td>Look over your notes each night to make sure you have the material down pact. If you want to take a further step, re-writing notes always helps retain information. </td>
-   </tr>
-   <tr>
-     <td>Learn to accept failure! You can't always be perfect and therefore, you are bound to fail. Just learn from your mistakes and be better. </td>
-   </tr>
-   <tr>
-     <td>Effectively make use of a class. Make friends for help on homework, actively make yourself known by your teacher, attend tutoring sessions, finish classwork on time. Using classtime effectively minimizes the work you have to do at home.</td>
-   </tr>
- </table>
+      <div class="w3-third w3-center">
+        <i class="fa fa-clock-o w3-padding-64 w3-text-red"></i>
+      </div>
 
 
- <table id = "sleep" class="w3-table-all w3-card-4" style = "width:60%; display: none;">
-    <tr>
-     <th><center>Sleep Tips</center></th>
-    </tr>
-    <tr>
-      <td>Develop a schedule to stick to. Do your night routine and get in bed at a specific time each night.</td>
-    </tr>
-    <tr>
-      <td>Avoid naps! Tire yourself out through the day and sleep well at night!</td>
-    </tr>
-    <tr>
-      <td>Create a comfortable sleeping enviornment. If you like the area in which you sleep and are comfortable sleeping, you'll have a better time of it.</td>
-    </tr>
-    <tr>
-      <td>Avoid your phone and any bright lights that might keep you awake. Read a book, pick up journaling.</td>
-    </tr>
-    <tr>
-      <td>If it gets really bad, don't be afraid to talk to your doctor.</td>
-    </tr>
-  </table>
+    </div>
+  </div>
 
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+        <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+      </div>
 
+      <div class="w3-twothird">
+        <h1>Lorem Ipsum</h1>
+        <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
-  <table id = "social" class="w3-table-all w3-card-4" style = "display: none; width: 60%;">
-     <tr>
-      <th><center>Social Tips</center></th>
-     </tr>
-     <tr>
-       <td>Initiate conversation with new people!</td>
-     </tr>
-     <tr>
-       <td>Keep eye contact, smile, and listen. People like to know that you are engaged in their side of the conversation.</td>
-     </tr>
-     <tr>
-       <td>Make your mark! Make a good first impression to maintain good long-lasting friendships.</td>
-     </tr>
-     <tr>
-       <td>Ask people you are conversing with questions about themselves and their background to show that you would like to know more about them.</td>
-     </tr>
-     <tr>
-       <td>Keep in contact! Get numbers, names, emails. Try to keep up a consistent connection.</td>
-     </tr>
-   </table>
+        <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
 
-   <table id = "work" class="w3-table-all w3-card-4" style = "display: none; width: 60%;">
-      <tr>
-       <th><center>Work Tips</center></th>
-      </tr>
-      <tr>
-        <td>Keep a positive attitude! Even when projects are tough, keep going and push onward!</td>
-      </tr>
-      <tr>
-        <td>Be on time. Being late shows that you no longer care about your job.</td>
-      </tr>
-      <tr>
-        <td>Get to know your colleagues but don't be there to gossip. You are there to work, not invest time in petty gossip.</td>
-      </tr>
-      <tr>
-        <td>Be a professional; accept constructive criticism. Feedback is meant to help you grow and learn, not take personal offense. </td>
-      </tr>
-      <tr>
-        <td>Go the extra mile to show that you are passionate in your job. Do this by avoiding distractions and setting goals for each and every day!</td>
-      </tr>
-    </table>
-<p id="demo"></p>
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+      <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+  </div>
 
-<script>
-function book() {
-  if (document.getElementById("school").style.display == "none"){
-    document.getElementById("school").style.display = "block";
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <div class="w3-xlarge w3-padding-32">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+   </div>
+   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+  <script>
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
   }
-  else{
-    document.getElementById("school").style.display = "none";
-  }
-}
-function sleep() {
-  if (document.getElementById("sleep").style.display == "none"){
-    document.getElementById("sleep").style.display = "block";
-  }
-  else{
-    document.getElementById("sleep").style.display = "none";
-  }
-}
-function social() {
-  if (document.getElementById("social").style.display == "none"){
-    document.getElementById("social").style.display = "block";
-  }
-  else{
-    document.getElementById("social").style.display = "none";
-  }
-}
-function work() {
-  if (document.getElementById("work").style.display == "none"){
-    document.getElementById("work").style.display = "block";
-  }
-  else{
-    document.getElementById("work").style.display = "none";
-  }
-}
-</script>
+  </script>
+
+
+
+
 
 </body>
 </html>
