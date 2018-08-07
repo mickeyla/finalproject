@@ -2,24 +2,118 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="header.css">
 <script src="website.js"></script>
 <title>Focal Focus</title>
 <meta charset="UTF-8">
 </head>
-<style>
 
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-book,.fa-comments {font-size:200px}
+</style>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large"><style: "color: #809BCE;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="analyze.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Analyze Your Time</a>
+    <a href="tips.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
+    <a href="todo.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Schedule Your Time</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Analyze Your Time</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Tips</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Schedule Your Time</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-teal w3-center" style="padding:128px 16px";>
+  <h1 class="w3-margin w3-jumbo">Focal Focus</h1>
+  <p class="w3-xlarge">A Time Managing Tool</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="analyze.html"> Get Started </a></button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>About Focal Focus</h1>
+      <h5 class="w3-padding-32">Procrastination is a problem that hinders many people including a vast amount of students.
+      To help with this problem, Focal Focus was made FOR students BY students.
+      Focal Focus is an interactive website that is supposed to be interactive, helpful, and organized;
+      all through promoting better time management and healthy studying habits. </h5>
+
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-book w3-center w3-padding-64 w3-text-black"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-comments w3-padding-64 w3-text-black w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>About The Creators</h1>
+      <h5 class="w3-padding-32">The creators, Alexis Denny and Mickeyla Clark, are graduating Girls Who Code students and procrastinators. Their goal is to help students like them be able to manage their time.</h5>
+
+      <p class="w3-text-grey">Contact:
+      <h5><a href="https://www.linkedin.com/in/mickeyla-clark-5b7b48167/">Mickeyla's Linkedin</a></h5>
+      <h5><a href="https://www.linkedin.com/in/alexis-denny-4b0b49167/">Alexis' Linkedin</a></h5>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">“A wind that blows aimlessly is no good to anyone.”
+– Rick Riord​an</h1>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+<!--
+<style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 10000px;
   position: relative;
   margin: auto;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -34,18 +128,15 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -56,7 +147,6 @@ img {vertical-align: middle;}
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -65,7 +155,6 @@ img {vertical-align: middle;}
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -77,11 +166,9 @@ img {vertical-align: middle;}
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -89,17 +176,14 @@ img {vertical-align: middle;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
@@ -108,64 +192,45 @@ img {vertical-align: middle;}
 <header>
     <div class="container">
         <a href="home.html"><img src = "LOGO.JPG" alt = "logo" class = "logo" height = 75 width = 160></a>
-
       <nav>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="analyze.html">Analyze Your Time</a></li>
           <li><a href="tips.html">Tips</a></li>
           <li><a href="about.html">About Focal Focus</a></li>
-
         </ul>
       </nav>
     </div>
   </header>
 <body>
-
   <div class="slideshow-container">
-
   <div class="mySlides fade">
-
     <img src="work.png" style="width:100%">
-
   </div>
-
   <div class="mySlides fade">
-
     <img src="social.png" style="width:100%">
-
   </div>
-
   <div class="mySlides fade">
-
     <img src="eat.png" style="width:100%">
-
   </div>
-
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
   </div>
   <br>
-
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
-
   <script>
   var slideIndex = 1;
   showSlides(slideIndex);
-
   function plusSlides(n) {
     showSlides(slideIndex += n);
   }
-
   function currentSlide(n) {
     showSlides(slideIndex = n);
   }
-
   function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -182,7 +247,6 @@ img {vertical-align: middle;}
     dots[slideIndex-1].className += " active";
   }
   </script>
-
   <font color = black>
   <font face = sans-serif>
 <center>
@@ -209,7 +273,6 @@ img {vertical-align: middle;}
   <h3>
     Mickeyla Clark
   </h3>
-
   <h3>
     Alexis
   </h3>
@@ -218,8 +281,10 @@ img {vertical-align: middle;}
   WORDS
   WORDS
   <h3>
-
   </font>
 </font>
+-->
+
+
 </body>
 </html>
