@@ -4,30 +4,24 @@
     <meta charset="utf-8">
     <title>Step 3 - Adding a Legend</title>
     <link rel="stylesheet" href="normalize.css"
-
-
+    <style>
+  
+    </style>
   </head>
   <body>
-    <p id="hi">Hey, B!</p>
     <div id="chart"></div>
     <script src="d3.v4.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-    (function(d3) {
+      (function(d3) {
         'use strict';
+
         var dataset = [
           { label: 'Abulia', count: 10 },
           { label: 'Betelgeuse', count: 20 },
           { label: 'Cantaloupe', count: 30 },
           { label: 'Dijkstra', count: 40 }
         ];
-        //Insert user's input into dataset
-    var x;
-    var dataIndex=0;
-    for x in dataset {
-      dataset[x] = data[dataIndex];
-      dataIndex+=1;
-    }
 
         var width = 360;
         var height = 360;
@@ -35,7 +29,9 @@
         var donutWidth = 75;
         var legendRectSize = 18;                                  // NEW
         var legendSpacing = 4;                                    // NEW
+
         var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
         var svg = d3.select('#chart')
           .append('svg')
           .attr('width', width)
@@ -43,12 +39,15 @@
           .append('g')
           .attr('transform', 'translate(' + (width / 2) +
             ',' + (height / 2) + ')');
+
         var arc = d3.arc()
           .innerRadius(radius - donutWidth)
           .outerRadius(radius);
+
         var pie = d3.pie()
           .value(function(d) { return d.count; })
           .sort(null);
+
         var path = svg.selectAll('path')
           .data(pie(dataset))
           .enter()
@@ -57,6 +56,7 @@
           .attr('fill', function(d, i) {
             return color(d.data.label);
           });
+
         var legend = svg.selectAll('.legend')                     // NEW
           .data(color.domain())                                   // NEW
           .enter()                                                // NEW
@@ -69,18 +69,19 @@
             var vert = i * height - offset;                       // NEW
             return 'translate(' + horz + ',' + vert + ')';        // NEW
           });                                                     // NEW
+
         legend.append('rect')                                     // NEW
           .attr('width', legendRectSize)                          // NEW
           .attr('height', legendRectSize)                         // NEW
           .style('fill', color)                                   // NEW
           .style('stroke', color);                                // NEW
+
         legend.append('text')                                     // NEW
           .attr('x', legendRectSize + legendSpacing)              // NEW
           .attr('y', legendRectSize - legendSpacing)              // NEW
           .text(function(d) { return d; });                       // NEW
+
       })(window.d3);
-
-
     </script>
   </body>
 </html>
